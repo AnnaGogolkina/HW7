@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+</head>
+<body>
+    <script>
+        // Создаем массив с вопросами и правильными ответами
+const quiz = [
+    { question: "Какой цвет неба?", options: ["1. Красный", "2. Синий", "3. Зеленый"], answer: "2" },
+    { question: "Сколько дней в неделе?",options: ["1. Шесть", "2. Семь", "3. Восемь"], answer: "2" },
+    { question: "Сколько у человека пальцев на одной руке?", options: ["1. Четыре", "2. Пять", "3. Шесть"], answer: "2" },
+    
+];
+
+let correctCount = 0;
+
+quiz.forEach((q, index) => {
+    let userAnswer = prompt(`${q.question}\n${q.options.join('\n')}`);
+    if (userAnswer === q.answer) {
+        correctCount++;
+    }
+});
+
+// Выводим количество правильных ответов
+alert(`Вы ответили правильно на ${correctCount} из ${questions.length} вопросов!`);
+
+    </script>
+    
+
+</body>
+</html>
